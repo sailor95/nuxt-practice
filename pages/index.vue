@@ -3,35 +3,16 @@
     <section class="intro">
       <h1>Get the latest tech news!</h1>
     </section>
-    <section class="featured-posts">
-      <PostPreview
-        id="1"
-        thumbnail="https://media.mehrnews.com/d/2018/10/28/4/2940617.jpg"
-        title="Hello there!"
-        previewText="This is my first post!"
-      />
-      <PostPreview
-        id="2"
-        thumbnail="https://media.mehrnews.com/d/2018/10/28/4/2940617.jpg"
-        title="Hello there! 2nd"
-        previewText="This is my 2nd post!"
-      />
-      <PostPreview
-        id="3"
-        thumbnail="https://media.mehrnews.com/d/2018/10/28/4/2940617.jpg"
-        title="Hello there! 3rd"
-        previewText="This is my 3rd post!"
-      />
-    </section>
+    <PostList />
   </div>
 </template>
 
 <script>
-import PostPreview from '@/components/Posts/PostPreview';
+import PostList from '@/components/Posts/PostList';
 
 export default {
   components: {
-    PostPreview,
+    PostList,
   },
 };
 </script>
@@ -66,14 +47,5 @@ export default {
   .intro h1 {
     font-size: 2rem;
   }
-}
-
-.featured-posts {
-  display: flex;
-  padding: 20px;
-  box-sizing: border-box;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
 }
 </style>
