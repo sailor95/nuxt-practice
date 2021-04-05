@@ -14,8 +14,8 @@ export default {
   components: {
     PostList,
   },
-  data() {
-    return {
+  asyncData() {
+    const genData = {
       loadedPosts: [
         {
           id: '1',
@@ -31,6 +31,12 @@ export default {
         },
       ],
     };
+
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(genData);
+      }, 1500);
+    });
   },
 };
 </script>
